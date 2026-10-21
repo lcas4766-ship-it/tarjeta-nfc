@@ -32,9 +32,9 @@
   const DATOS = {
     titulo:   "Datos para transferencia",
     subtitulo:"Copia los datos para hacer tu transferencia",
-    titular:  "NOMBRE DEL TITULAR",
-    banco:    "NOMBRE DEL BANCO",
-    cuenta:   "NÚMERO DE CUENTA"
+    titular:  "Javier Acosta",
+    banco:    "Banamex",
+    cuenta:   "002320904983341550"
   };
 </script>
 <!-- ============================================================ -->
@@ -54,9 +54,9 @@
     <button type="button" data-copiar="banco">Copiar banco</button>
   </div>
   <div class="dato">
-    <div class="etiqueta">Número de cuenta</div>
+    <div class="etiqueta">CLABE</div>
     <div class="valor" id="cuenta"></div>
-    <button type="button" data-copiar="cuenta">Copiar número de cuenta</button>
+    <button type="button" data-copiar="cuenta">Copiar CLABE</button>
   </div>
 
   <button id="todo" type="button">Copiar todos los datos</button>
@@ -88,7 +88,7 @@
     });
   });
   document.getElementById('todo').addEventListener('click', async (e) => {
-    await copiar(`Titular: ${DATOS.titular}\nBanco: ${DATOS.banco}\nNúmero de cuenta: ${DATOS.cuenta}`);
+    await copiar(`Titular: ${DATOS.titular}\nBanco: ${DATOS.banco}\nCLABE: ${DATOS.cuenta}`);
     aviso(e.currentTarget);
   });
 </script>
